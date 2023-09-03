@@ -1,36 +1,102 @@
 # Información del Intranet Asistencia
-- Requisitos de la Aplicación
+
+> Requisitos de la Aplicación
+
+**Requisitos Funcionales:**
+
+* Gestión de Administración:
+
+    El administrador puede gestionar parámetros relacionados con áreas, asistencias, departamentos por usuario, perfiles, roles, servicios, estados, tiempos, tipos y usuarios. Para el caso de servicios se tiene como referencia los siguientes: Gestión, Break, Almuerzo, Baño y Otros. Y para el caso de tipos tenemos de Entrada y Salida.
+
+    Puede agregar, editar y eliminar registros en cada una de las secciones mencionadas anteriormente.
 
 
-- Diseño Físico de la BD
+* Gestión de Reportes:
+
+    El administrador puede generar informes generales y específicos por fecha de inicio y fin.
+	Los informes deben mostrar detalles de las actividades realizadas por los usuarios.
+	Los informes deben ser exportables en formatos comunes como PDF o CSV.
 
 
-- Arquitectura de la Aplicación
+* Roles y Permisos:
 
+    Existen tres roles principales: Administrador, Ejecutivo y Trabajador.
+	El Administrador tiene acceso completo a todas las funciones de la aplicación.
+	El Rol Ejecutivo puede ver informes y la asistencia general solo con opción de agregar observación en el caso de requiera.
+	Los Trabajadores solo pueden ver su propia asistencia y marcar asistencia.
+
+
+* Registro de Asistencia:
+
+    Todos los roles pueden marcar asistencia. Se utiliza un botón de "Gestión" el cual es un servicio para marcar asistencia, el cual permitirá iniciar su día laboral y permitir seleccionar otros servicios como "Almuerzo", "Baño" , "Break" u "Otros".
+	No se permite marcar más de un servicio a la vez. Al marcar un servicio, el botón cambia de color indicando entrada o salida.
+
+
+* Control de Sesión:
+
+    Los usuarios deben iniciar sesión para acceder a la aplicación.
+	La sesión debe expirar automáticamente después de un período de inactividad.
+
+
+>  Requisitos No Funcionales:
+
+* Seguridad:
+
+    La aplicación debe tener medidas de seguridad basada en roles para el control de la información. Así como mantener las contraseñas de acceso bajo un cifrado.
+
+
+* Usabilidad:
+
+    La aplicación debe ser compatible con dispositivos móviles para facilitar el acceso desde cualquier lugar, así mismo para laptops, tablets y monitor.
+
+* Disponibilidad:
+
+    La aplicación debe estar disponible y accesible en todo momento, con un tiempo de inactividad mínimo planificado para el mantenimiento.
+
+* Integración:
+
+    La aplicación debe admitir la integración con sistemas existentes si es necesario.
+
+
+> Diseño Físico de la BD
+
+![Database](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/83344d35-2746-4bef-8546-d399b443bf53)
+
+> Arquitectura de la Aplicación
+
+![arquitectura](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/94cf4bf7-0e08-4d08-81d2-bcfbf6f415a1)
 
 # Implementación
+
 - El proyecto es "Intranet_asistencia", deberan tener configurado el RestApi y Backend en servidor local o web
 - Tener listo la base de datos intranet_asistencia de la ruta "backup/intraner_asistencia.sql"
 - Configurar en base a sus rutas especificas los archivos .env del ResApi y Backend
 
 # Cuenta de acceso
+
 - admin/123456789
 - executive/123456789
 - worker/123456789
 
 # Vistas
-- Login
 
+> Login
 
-- admin
+![1app](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/989c1b30-9a69-48f0-8303-a96a6aae89e6)
 
+> admin
 
-- executive
+![2app](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/4a85e2d9-4d66-451e-a446-9bb89adcb914)
+![2appadmin](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/ba9f1584-df00-4050-8a78-8ba85f96c04b)
 
+> executive
 
-- worker
+![3appexecutive](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/e5c17f17-88ca-4625-9940-5af31928810f)
 
+> worker
 
+![4appworker](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/8ba938a1-1b5c-45e2-885e-c0e0824fcc88)
+![5appworker](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/dbb75a82-01bf-4f99-8a54-59408c8c56ba)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
