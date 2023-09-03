@@ -98,6 +98,12 @@
 ![4appworker](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/8ba938a1-1b5c-45e2-885e-c0e0824fcc88)
 ![5appworker](https://github.com/bryan-arrivasplata-rojas/intranet_asistencia_restapi_v1.0_2023/assets/97413969/dbb75a82-01bf-4f99-8a54-59408c8c56ba)
 
+# Información
+
+website: https://bryanarrivasplata.com/
+intranet_asistencia (backend): https://bryanarrivasplata.com/intranet_asistencia/backend/
+intranet_asistencia (restapi): https://bryanarrivasplata.com/intranet_asistencia/restapi/
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
