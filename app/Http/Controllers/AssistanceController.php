@@ -222,6 +222,7 @@ class AssistanceController extends Controller
             $assistance->idDepartmentUser = $request->input('idDepartmentUser');
             $assistance->idType = $request->input('idType');
             $assistance->idService = $request->input('idService');
+            $assistance->created_at = Carbon::now('America/Lima')->toDateTimeString();
             $assistance->save();
             
             return response()->json(['message' => 'Asistencia creada correctamente','response'=>$assistance], 200);

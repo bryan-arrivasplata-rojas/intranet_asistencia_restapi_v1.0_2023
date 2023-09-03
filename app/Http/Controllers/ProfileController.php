@@ -10,6 +10,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use Carbon\Carbon;
 
 class ProfileController extends Controller
 {
@@ -96,6 +97,7 @@ class ProfileController extends Controller
             $profile->idState = $request->input('idState');
             $profile->idUser = $request->input('idUser');
             $profile->idRol = $request->input('idRol');
+            $profile->created_at = Carbon::now('America/Lima')->toDateTimeString();
             $profile->save();
             
             return response()->json(['message' => 'Perfil creado correctamente','response'=>$profile], 200);

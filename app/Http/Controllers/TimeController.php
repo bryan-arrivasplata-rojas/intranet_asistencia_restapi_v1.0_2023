@@ -9,6 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use Carbon\Carbon;
 
 class TimeController extends Controller
 {
@@ -45,6 +46,7 @@ class TimeController extends Controller
             $time = new TimeModel();
             $time->start_time = $request->input('start_time');
             $time->end_time = $request->input('end_time');
+            $time->created_at = Carbon::now('America/Lima')->toDateTimeString();
             $time->save();
             
             return response()->json(['message' => 'Time creado correctamente','response'=>$time], 200);

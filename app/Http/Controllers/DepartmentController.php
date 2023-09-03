@@ -9,6 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use Carbon\Carbon;
 
 class DepartmentController extends Controller
 {
@@ -59,6 +60,7 @@ class DepartmentController extends Controller
             $department->idState = $request->input('idState');
             $department->idArea = $request->input('idArea');
             $department->idTime = $request->input('idTime');
+            $department->created_at = Carbon::now('America/Lima')->toDateTimeString();
             $department->save();
             
             return response()->json(['message' => 'Departamento creado correctamente','response'=>$department], 200);

@@ -9,6 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use Carbon\Carbon;
 
 class RolController extends Controller
 {
@@ -41,6 +42,7 @@ class RolController extends Controller
             $rol->name_rol = $request->input('name_rol');
             $rol->name_rol_view = $request->input('name_rol_view');
             $rol->description_rol = $request->input('description_rol');
+            $rol->created_at = Carbon::now('America/Lima')->toDateTimeString();
             $rol->save();
             
             return response()->json(['message' => 'Rol creado correctamente','response'=>$rol], 200);

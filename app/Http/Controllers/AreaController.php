@@ -9,6 +9,7 @@ use Illuminate\Database\QueryException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Validation\Rule;
+use Carbon\Carbon;
 
 class AreaController extends Controller
 {
@@ -40,6 +41,7 @@ class AreaController extends Controller
             $area->name_area = $request->input('name_area');
             $area->description_area = $request->input('description_area');
             $area->idState = $request->input('idState');
+            $area->created_at = Carbon::now('America/Lima')->toDateTimeString();
             $area->save();
             
             return response()->json(['message' => 'Area creado correctamente','response'=>$area], 200);
